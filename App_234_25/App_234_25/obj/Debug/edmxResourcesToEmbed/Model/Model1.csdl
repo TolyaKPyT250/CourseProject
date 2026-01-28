@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="user25Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="user25Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="Groups" EntityType="user25Model.Group" />
+    <EntitySet Name="Lecturers" EntityType="user25Model.Lecturer" />
+    <EntitySet Name="Rooms" EntityType="user25Model.Room" />
+    <EntitySet Name="Schedules" EntityType="user25Model.Schedule" />
+    <AssociationSet Name="FK__Schedules__Group__412EB0B6" Association="user25Model.FK__Schedules__Group__412EB0B6">
+      <End Role="Group" EntitySet="Groups" />
+      <End Role="Schedule" EntitySet="Schedules" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Schedules__Lectu__4222D4EF" Association="user25Model.FK__Schedules__Lectu__4222D4EF">
+      <End Role="Lecturer" EntitySet="Lecturers" />
+      <End Role="Schedule" EntitySet="Schedules" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Schedules__RoomI__4316F928" Association="user25Model.FK__Schedules__RoomI__4316F928">
+      <End Role="Room" EntitySet="Rooms" />
+      <End Role="Schedule" EntitySet="Schedules" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Group">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GroupName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Schedules" Relationship="user25Model.FK__Schedules__Group__412EB0B6" FromRole="Group" ToRole="Schedule" />
+  </EntityType>
+  <EntityType Name="Lecturer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Department" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Schedules" Relationship="user25Model.FK__Schedules__Lectu__4222D4EF" FromRole="Lecturer" ToRole="Schedule" />
+  </EntityType>
+  <EntityType Name="Room">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoomNumber" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Schedules" Relationship="user25Model.FK__Schedules__RoomI__4316F928" FromRole="Room" ToRole="Schedule" />
+  </EntityType>
+  <EntityType Name="Schedule">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DayOfWeek" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="LessonNumber" Type="Int32" Nullable="false" />
+    <Property Name="GroupId" Type="Int32" />
+    <Property Name="LecturerId" Type="Int32" />
+    <Property Name="RoomId" Type="Int32" />
+    <Property Name="SubjectName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Group" Relationship="user25Model.FK__Schedules__Group__412EB0B6" FromRole="Schedule" ToRole="Group" />
+    <NavigationProperty Name="Lecturer" Relationship="user25Model.FK__Schedules__Lectu__4222D4EF" FromRole="Schedule" ToRole="Lecturer" />
+    <NavigationProperty Name="Room" Relationship="user25Model.FK__Schedules__RoomI__4316F928" FromRole="Schedule" ToRole="Room" />
+  </EntityType>
+  <Association Name="FK__Schedules__Group__412EB0B6">
+    <End Type="user25Model.Group" Role="Group" Multiplicity="0..1" />
+    <End Type="user25Model.Schedule" Role="Schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Group">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Schedule">
+        <PropertyRef Name="GroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Schedules__Lectu__4222D4EF">
+    <End Type="user25Model.Lecturer" Role="Lecturer" Multiplicity="0..1" />
+    <End Type="user25Model.Schedule" Role="Schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lecturer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Schedule">
+        <PropertyRef Name="LecturerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Schedules__RoomI__4316F928">
+    <End Type="user25Model.Room" Role="Room" Multiplicity="0..1" />
+    <End Type="user25Model.Schedule" Role="Schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Room">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Schedule">
+        <PropertyRef Name="RoomId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
