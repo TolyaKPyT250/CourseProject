@@ -1,0 +1,210 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\stud2024000587\\Desktop\\CourseProject\\App_234_25\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|c:\\users\\stud2024000587\\desktop\\courseproject\\app_234_25\\app_234_25\\model\\model1.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|solutionrelative:app_234_25\\model\\model1.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|c:\\users\\stud2024000587\\desktop\\courseproject\\app_234_25\\app_234_25\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|solutionrelative:app_234_25\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|C:\\Users\\stud2024000587\\Desktop\\CourseProject\\App_234_25\\app_234_25\\views\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|solutionrelative:app_234_25\\views\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|C:\\Users\\stud2024000587\\Desktop\\CourseProject\\App_234_25\\app_234_25\\views\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|solutionrelative:app_234_25\\views\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|C:\\Users\\stud2024000587\\Desktop\\CourseProject\\App_234_25\\app_234_25\\views\\addlessonwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|solutionrelative:app_234_25\\views\\addlessonwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|C:\\Users\\stud2024000587\\Desktop\\CourseProject\\App_234_25\\app_234_25\\model\\model1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|solutionrelative:app_234_25\\model\\model1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|C:\\Users\\stud2024000587\\Desktop\\CourseProject\\App_234_25\\app_234_25\\model\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|solutionrelative:app_234_25\\model\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|C:\\Users\\stud2024000587\\Desktop\\CourseProject\\App_234_25\\app_234_25\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|solutionrelative:app_234_25\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|C:\\Users\\stud2024000587\\Desktop\\CourseProject\\App_234_25\\app_234_25\\model\\model1.edmx.diagram||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|solutionrelative:app_234_25\\model\\model1.edmx.diagram||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|C:\\Users\\stud2024000587\\Desktop\\CourseProject\\App_234_25\\app_234_25\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|solutionrelative:app_234_25\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|C:\\Users\\stud2024000587\\Desktop\\CourseProject\\App_234_25\\app_234_25\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|solutionrelative:app_234_25\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|C:\\Users\\stud2024000587\\Desktop\\CourseProject\\App_234_25\\app_234_25\\views\\addlessonwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|solutionrelative:app_234_25\\views\\addlessonwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Model1.Context.cs",
+              "DocumentMoniker": "C:\\Users\\stud2024000587\\Desktop\\CourseProject\\App_234_25\\App_234_25\\Model\\Model1.Context.cs",
+              "RelativeDocumentMoniker": "App_234_25\\Model\\Model1.Context.cs",
+              "ToolTip": "C:\\Users\\stud2024000587\\Desktop\\CourseProject\\App_234_25\\App_234_25\\Model\\Model1.Context.cs",
+              "RelativeToolTip": "App_234_25\\Model\\Model1.Context.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T05:45:16.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\stud2024000587\\Desktop\\CourseProject\\App_234_25\\App_234_25\\Views\\LoginWindow.xaml",
+              "RelativeDocumentMoniker": "App_234_25\\Views\\LoginWindow.xaml",
+              "ToolTip": "C:\\Users\\stud2024000587\\Desktop\\CourseProject\\App_234_25\\App_234_25\\Views\\LoginWindow.xaml",
+              "RelativeToolTip": "App_234_25\\Views\\LoginWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-03T04:03:12.678Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AddLessonWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\stud2024000587\\Desktop\\CourseProject\\App_234_25\\App_234_25\\Views\\AddLessonWindow.xaml",
+              "RelativeDocumentMoniker": "App_234_25\\Views\\AddLessonWindow.xaml",
+              "ToolTip": "C:\\Users\\stud2024000587\\Desktop\\CourseProject\\App_234_25\\App_234_25\\Views\\AddLessonWindow.xaml",
+              "RelativeToolTip": "App_234_25\\Views\\AddLessonWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-03T04:03:12.673Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Model1.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\stud2024000587\\Desktop\\CourseProject\\App_234_25\\App_234_25\\Model\\Model1.edmx",
+              "RelativeDocumentMoniker": "App_234_25\\Model\\Model1.edmx",
+              "ToolTip": "C:\\Users\\stud2024000587\\Desktop\\CourseProject\\App_234_25\\App_234_25\\Model\\Model1.edmx [Diagram1]",
+              "RelativeToolTip": "App_234_25\\Model\\Model1.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2026-02-03T04:34:10.803Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Model1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\stud2024000587\\Desktop\\CourseProject\\App_234_25\\App_234_25\\Model\\Model1.Designer.cs",
+              "RelativeDocumentMoniker": "App_234_25\\Model\\Model1.Designer.cs",
+              "ToolTip": "C:\\Users\\stud2024000587\\Desktop\\CourseProject\\App_234_25\\App_234_25\\Model\\Model1.Designer.cs",
+              "RelativeToolTip": "App_234_25\\Model\\Model1.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T05:33:17.353Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\stud2024000587\\Desktop\\CourseProject\\App_234_25\\App_234_25\\Views\\LoginWindow.xaml.cs",
+              "RelativeDocumentMoniker": "App_234_25\\Views\\LoginWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\stud2024000587\\Desktop\\CourseProject\\App_234_25\\App_234_25\\Views\\LoginWindow.xaml.cs",
+              "RelativeToolTip": "App_234_25\\Views\\LoginWindow.xaml.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T04:03:12.676Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\stud2024000587\\Desktop\\CourseProject\\App_234_25\\App_234_25\\App.config",
+              "RelativeDocumentMoniker": "App_234_25\\App.config",
+              "ToolTip": "C:\\Users\\stud2024000587\\Desktop\\CourseProject\\App_234_25\\App_234_25\\App.config",
+              "RelativeToolTip": "App_234_25\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAbAQAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-02-03T04:23:49.941Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "packages.config",
+              "DocumentMoniker": "C:\\Users\\stud2024000587\\Desktop\\CourseProject\\App_234_25\\App_234_25\\packages.config",
+              "RelativeDocumentMoniker": "App_234_25\\packages.config",
+              "ToolTip": "C:\\Users\\stud2024000587\\Desktop\\CourseProject\\App_234_25\\App_234_25\\packages.config",
+              "RelativeToolTip": "App_234_25\\packages.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-02-03T04:09:59.23Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Model1.edmx.diagram",
+              "DocumentMoniker": "C:\\Users\\stud2024000587\\Desktop\\CourseProject\\App_234_25\\App_234_25\\Model\\Model1.edmx.diagram",
+              "RelativeDocumentMoniker": "App_234_25\\Model\\Model1.edmx.diagram",
+              "ToolTip": "C:\\Users\\stud2024000587\\Desktop\\CourseProject\\App_234_25\\App_234_25\\Model\\Model1.edmx.diagram",
+              "RelativeToolTip": "App_234_25\\Model\\Model1.edmx.diagram",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-02-03T05:33:16.079Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\stud2024000587\\Desktop\\CourseProject\\App_234_25\\App_234_25\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "App_234_25\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\stud2024000587\\Desktop\\CourseProject\\App_234_25\\App_234_25\\MainWindow.xaml",
+              "RelativeToolTip": "App_234_25\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-03T04:03:12.679Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\stud2024000587\\Desktop\\CourseProject\\App_234_25\\App_234_25\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "App_234_25\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\stud2024000587\\Desktop\\CourseProject\\App_234_25\\App_234_25\\MainWindow.xaml.cs",
+              "RelativeToolTip": "App_234_25\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAcwBEAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T04:03:12.805Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AddLessonWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\stud2024000587\\Desktop\\CourseProject\\App_234_25\\App_234_25\\Views\\AddLessonWindow.xaml.cs",
+              "RelativeDocumentMoniker": "App_234_25\\Views\\AddLessonWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\stud2024000587\\Desktop\\CourseProject\\App_234_25\\App_234_25\\Views\\AddLessonWindow.xaml.cs",
+              "RelativeToolTip": "App_234_25\\Views\\AddLessonWindow.xaml.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAuwCIAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T04:03:12.672Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

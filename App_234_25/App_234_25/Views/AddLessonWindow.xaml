@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:App_234_25.Views"
         mc:Ignorable="d"
-        Title="Добавить пару" Height="413" Width="400" WindowStartupLocation="CenterScreen">
+        Title="Добавить пару" Height="413" Width="400" WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
     <Grid>
         <StackPanel Margin="20">
             <TextBlock Text="День недели:"/>

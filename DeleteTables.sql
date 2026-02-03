@@ -1,0 +1,6 @@
+USE user25
+GO
+
+DELETE FROM Schedules;
+DELETE FROM Groups;
+DELETE FROM Rooms;

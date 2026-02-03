@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:App_234_25"
         mc:Ignorable="d"
-        Title="Редактор расписания" Height="580" Width="800" WindowStartupLocation="CenterScreen">
+        Title="Редактор расписания" Height="580" Width="800" WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -14,8 +15,8 @@
         <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
             <TextBlock Text="Выберите группу: " VerticalAlignment="Center"/>
             <ComboBox x:Name="cbGroups" Width="150" DisplayMemberPath="GroupName" SelectionChanged="cbGroups_SelectionChanged"/>
-            <Button Content="Добавить пару" Click="btnOpenAdd_Click" Width="130" HorizontalContentAlignment="Center" Padding="1,1,2,1"/>
-            <Button Content="Удалить пару" Click="btnDelete_Click" Width="130" HorizontalContentAlignment="Center" Padding="1, 1,2,1"/>
+            <Button Content="Добавить пару" Click="btnOpenAdd_Click" Width="130" Padding="1,1,1,1" Margin="250, 8, 0, 0"/>
+            <Button Content="Удалить пару" Click="btnDelete_Click" Width="130" Padding="1, 1,1,1" Margin="20, 8, 0, 0"/>
         </StackPanel>
         <DataGrid x:Name="dgSchedule" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True">
             <DataGrid.Columns>

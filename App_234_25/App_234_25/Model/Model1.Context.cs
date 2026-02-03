@@ -25,10 +25,10 @@ namespace App_234_25.Model
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Group> Groups { get; set; }
         public virtual DbSet<Lecturer> Lecturers { get; set; }
         public virtual DbSet<Room> Rooms { get; set; }
         public virtual DbSet<Schedule> Schedules { get; set; }
+        public virtual DbSet<User> Users { get; set; }
     }
 }

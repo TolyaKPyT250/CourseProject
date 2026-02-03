@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:App_234_25.Views"
         mc:Ignorable="d"
-        Title="Авторизация" Height="250" Width="300" WindowStartupLocation="CenterScreen">
+        Title="Авторизация" Height="250" Width="300" WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
     <Grid>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="200">
             <TextBlock Text="Логин:"/>

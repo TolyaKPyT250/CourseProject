@@ -51,7 +51,7 @@ namespace App_234_25.Views
                 }
                 catch (System.Exception ex)
                 {
-                    MessageBox.Show("Ошибка подключения к БД: " + ex.Message);
+                    MessageBox.Show("Ошибка подключения к БД: " + ex.InnerException?.Message ?? ex.Message);
                 }
             }
         }
