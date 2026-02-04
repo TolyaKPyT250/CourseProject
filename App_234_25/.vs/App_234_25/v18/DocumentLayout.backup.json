@@ -15,7 +15,7 @@
       "RelativeMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|solutionrelative:app_234_25\\views\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|c:\\users\\stud2024000587\\desktop\\courseproject\\app_234_25\\app_234_25\\views\\addlessonwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|C:\\Users\\stud2024000587\\Desktop\\CourseProject\\App_234_25\\app_234_25\\views\\addlessonwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|solutionrelative:app_234_25\\views\\addlessonwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
@@ -69,8 +69,7 @@
               "ToolTip": "C:\\Users\\stud2024000587\\Desktop\\CourseProject\\App_234_25\\App_234_25\\Views\\LoginWindow.xaml",
               "RelativeToolTip": "App_234_25\\Views\\LoginWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-02-03T04:03:12.678Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-03T04:03:12.678Z"
             },
             {
               "$type": "Document",
@@ -81,8 +80,7 @@
               "ToolTip": "C:\\Users\\stud2024000587\\Desktop\\CourseProject\\App_234_25\\App_234_25\\Views\\AddLessonWindow.xaml",
               "RelativeToolTip": "App_234_25\\Views\\AddLessonWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-02-03T04:03:12.673Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-03T04:03:12.673Z"
             },
             {
               "$type": "Document",
