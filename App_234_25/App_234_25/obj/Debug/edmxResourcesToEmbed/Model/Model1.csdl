@@ -6,7 +6,7 @@
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="GroupName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="Schedules" Relationship="Self.FK__Schedules__Group__0A1E72EE" FromRole="Groups" ToRole="Schedules" />
+    <NavigationProperty Name="Schedules" Relationship="Self.FK__Schedules__Group__412EB0B6" FromRole="Groups" ToRole="Schedules" />
   </EntityType>
   <EntityType Name="Lecturer">
     <Key>
@@ -15,7 +15,7 @@
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="FullName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Department" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Schedules" Relationship="Self.FK__Schedules__Lectu__0B129727" FromRole="Lecturers" ToRole="Schedules" />
+    <NavigationProperty Name="Schedules" Relationship="Self.FK__Schedules__Lectu__4222D4EF" FromRole="Lecturers" ToRole="Schedules" />
   </EntityType>
   <EntityType Name="Room">
     <Key>
@@ -23,7 +23,7 @@
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="RoomNumber" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="Schedules" Relationship="Self.FK__Schedules__RoomI__0C06BB60" FromRole="Rooms" ToRole="Schedules" />
+    <NavigationProperty Name="Schedules" Relationship="Self.FK__Schedules__RoomI__4316F928" FromRole="Rooms" ToRole="Schedules" />
   </EntityType>
   <EntityType Name="Schedule">
     <Key>
@@ -36,9 +36,9 @@
     <Property Name="LecturerId" Type="Int32" />
     <Property Name="RoomId" Type="Int32" />
     <Property Name="SubjectName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="Group" Relationship="Self.FK__Schedules__Group__0A1E72EE" FromRole="Schedules" ToRole="Groups" />
-    <NavigationProperty Name="Lecturer" Relationship="Self.FK__Schedules__Lectu__0B129727" FromRole="Schedules" ToRole="Lecturers" />
-    <NavigationProperty Name="Room" Relationship="Self.FK__Schedules__RoomI__0C06BB60" FromRole="Schedules" ToRole="Rooms" />
+    <NavigationProperty Name="Group" Relationship="Self.FK__Schedules__Group__412EB0B6" FromRole="Schedules" ToRole="Groups" />
+    <NavigationProperty Name="Lecturer" Relationship="Self.FK__Schedules__Lectu__4222D4EF" FromRole="Schedules" ToRole="Lecturers" />
+    <NavigationProperty Name="Room" Relationship="Self.FK__Schedules__RoomI__4316F928" FromRole="Schedules" ToRole="Rooms" />
   </EntityType>
   <EntityType Name="User">
     <Key>
@@ -48,7 +48,7 @@
     <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
   </EntityType>
-  <Association Name="FK__Schedules__Group__0A1E72EE">
+  <Association Name="FK__Schedules__Group__412EB0B6">
     <End Role="Groups" Type="Self.Group" Multiplicity="0..1" />
     <End Role="Schedules" Type="Self.Schedule" Multiplicity="*" />
     <ReferentialConstraint>
@@ -60,7 +60,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Schedules__Lectu__0B129727">
+  <Association Name="FK__Schedules__Lectu__4222D4EF">
     <End Role="Lecturers" Type="Self.Lecturer" Multiplicity="0..1" />
     <End Role="Schedules" Type="Self.Schedule" Multiplicity="*" />
     <ReferentialConstraint>
@@ -72,7 +72,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Schedules__RoomI__0C06BB60">
+  <Association Name="FK__Schedules__RoomI__4316F928">
     <End Role="Rooms" Type="Self.Room" Multiplicity="0..1" />
     <End Role="Schedules" Type="Self.Schedule" Multiplicity="*" />
     <ReferentialConstraint>
@@ -90,15 +90,15 @@
     <EntitySet Name="Rooms" EntityType="Self.Room" />
     <EntitySet Name="Schedules" EntityType="Self.Schedule" />
     <EntitySet Name="Users" EntityType="Self.User" />
-    <AssociationSet Name="FK__Schedules__Group__0A1E72EE" Association="Self.FK__Schedules__Group__0A1E72EE">
+    <AssociationSet Name="FK__Schedules__Group__412EB0B6" Association="Self.FK__Schedules__Group__412EB0B6">
       <End Role="Groups" EntitySet="Groups" />
       <End Role="Schedules" EntitySet="Schedules" />
     </AssociationSet>
-    <AssociationSet Name="FK__Schedules__Lectu__0B129727" Association="Self.FK__Schedules__Lectu__0B129727">
+    <AssociationSet Name="FK__Schedules__Lectu__4222D4EF" Association="Self.FK__Schedules__Lectu__4222D4EF">
       <End Role="Lecturers" EntitySet="Lecturers" />
       <End Role="Schedules" EntitySet="Schedules" />
     </AssociationSet>
-    <AssociationSet Name="FK__Schedules__RoomI__0C06BB60" Association="Self.FK__Schedules__RoomI__0C06BB60">
+    <AssociationSet Name="FK__Schedules__RoomI__4316F928" Association="Self.FK__Schedules__RoomI__4316F928">
       <End Role="Rooms" EntitySet="Rooms" />
       <End Role="Schedules" EntitySet="Schedules" />
     </AssociationSet>

@@ -11,6 +11,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
@@ -31,6 +32,9 @@ namespace App_234_25.Views
             string login = txtLogin.Text;
             string password = txtPassword.Password;
 
+            StatusText.Text = "Проверка...";
+            StatusText.Foreground = Brushes.Gray;
+
             using (user25Entities context = new user25Entities())
             {
                 try
@@ -39,20 +43,61 @@ namespace App_234_25.Views
 
                     if (user != null)
                     {
-                        MessageBox.Show($"Добро пожаловать, {user.Login}!");
+                        StatusText.Text = "Доступ разрешен!";
+                        StatusText.Foreground = Brushes.Green;
+
+                        // Небольшая задержка перед закрытием для красоты
                         MainWindow mainWindow = new MainWindow();
                         mainWindow.Show();
                         this.Close();
                     }
                     else
                     {
-                        MessageBox.Show("Ошибка: Логин или пароль неверны.");
+                        ShowLoginError("Неверный логин или пароль");
                     }
                 }
-                catch (System.Exception ex)
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Ошибка подключения к БД: " + ex.InnerException?.Message ?? ex.Message);
+                    ShowLoginError("Ошибка сети/БД");
+                    Console.WriteLine(ex.Message);
                 }
+            }
+        }
+        // Перетаскивание окна
+        private void TitleBar_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+                this.DragMove();
+        }
+
+        // Свернуть
+        private void Minimize_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        // Закрыть
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void txtPassword_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if (e.Key == System.Windows.Input.Key.Enter)
+            {
+                SignIn_Click(this, new RoutedEventArgs());
+            }
+        }
+        private void ShowLoginError(string msg)
+        {
+            StatusText.Text = msg;
+            StatusText.Foreground = Brushes.Red;
+
+            // Запуск анимации из ресурсов LoginCard
+            if (LoginCard.Resources["ErrorAnimation"] is Storyboard sb)
+            {
+                sb.Begin();
             }
         }
     }

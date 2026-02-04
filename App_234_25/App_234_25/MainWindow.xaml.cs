@@ -93,5 +93,23 @@ namespace App_234_25
                 MessageBox.Show("Выберите запись для удаления в таблице!");
             }
         }
+        // Для перетаскивания окна
+        private void TitleBar_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+                this.DragMove();
+        }
+
+        // Кнопка свернуть
+        private void Minimize_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        // Кнопка закрыть
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown(); // Или this.Close();
+        }
     }
 }
