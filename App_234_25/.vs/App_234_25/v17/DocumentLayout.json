@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\\u0410\u043D\u0430\u0442\u043E\u043B\u0438\u0439\\Desktop\\CourseProject\\App_234_25\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|C:\\Users\\\u0410\u043D\u0430\u0442\u043E\u043B\u0438\u0439\\Desktop\\CourseProject\\App_234_25\\app_234_25\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|c:\\users\\\u0430\u043D\u0430\u0442\u043E\u043B\u0438\u0439\\desktop\\courseproject\\app_234_25\\app_234_25\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|solutionrelative:app_234_25\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,11 +11,11 @@
       "RelativeMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|solutionrelative:app_234_25\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|c:\\users\\\u0430\u043D\u0430\u0442\u043E\u043B\u0438\u0439\\desktop\\courseproject\\app_234_25\\app_234_25\\views\\generatewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|C:\\Users\\\u0410\u043D\u0430\u0442\u043E\u043B\u0438\u0439\\Desktop\\CourseProject\\App_234_25\\app_234_25\\views\\generatewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|solutionrelative:app_234_25\\views\\generatewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|c:\\users\\\u0430\u043D\u0430\u0442\u043E\u043B\u0438\u0439\\desktop\\courseproject\\app_234_25\\app_234_25\\views\\generatewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|C:\\Users\\\u0410\u043D\u0430\u0442\u043E\u043B\u0438\u0439\\Desktop\\CourseProject\\App_234_25\\app_234_25\\views\\generatewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|solutionrelative:app_234_25\\views\\generatewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
@@ -39,7 +39,7 @@
       "RelativeMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|solutionrelative:app_234_25\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|c:\\users\\\u0430\u043D\u0430\u0442\u043E\u043B\u0438\u0439\\desktop\\courseproject\\app_234_25\\app_234_25\\model\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "AbsoluteMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|C:\\Users\\\u0410\u043D\u0430\u0442\u043E\u043B\u0438\u0439\\Desktop\\CourseProject\\App_234_25\\app_234_25\\model\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
       "RelativeMoniker": "D:0:0:{58834D5D-4208-46DE-8719-4B655E85473F}|App_234_25\\App_234_25.csproj|solutionrelative:app_234_25\\model\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
     }
   ],
@@ -62,8 +62,7 @@
               "RelativeToolTip": "App_234_25\\Views\\GenerateWindow.xaml.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAwCIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-23T05:11:12.886Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-23T05:11:12.886Z"
             },
             {
               "$type": "Document",
@@ -74,8 +73,7 @@
               "ToolTip": "C:\\Users\\\u0410\u043D\u0430\u0442\u043E\u043B\u0438\u0439\\Desktop\\CourseProject\\App_234_25\\App_234_25\\Views\\GenerateWindow.xaml",
               "RelativeToolTip": "App_234_25\\Views\\GenerateWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-02-23T05:10:12.133Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-23T05:10:12.133Z"
             },
             {
               "$type": "Document",
@@ -86,8 +84,7 @@
               "ToolTip": "C:\\Users\\\u0410\u043D\u0430\u0442\u043E\u043B\u0438\u0439\\Desktop\\CourseProject\\App_234_25\\App_234_25\\Model\\Model1.edmx [Diagram1]",
               "RelativeToolTip": "App_234_25\\Model\\Model1.edmx [Diagram1]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
-              "WhenOpened": "2026-02-20T11:06:55.142Z",
-              "EditorCaption": " [Diagram1]"
+              "WhenOpened": "2026-02-20T11:06:55.142Z"
             },
             {
               "$type": "Document",
@@ -98,8 +95,7 @@
               "ToolTip": "C:\\Users\\\u0410\u043D\u0430\u0442\u043E\u043B\u0438\u0439\\Desktop\\CourseProject\\App_234_25\\App_234_25\\App.xaml",
               "RelativeToolTip": "App_234_25\\App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-28T15:22:25.014Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-28T15:22:25.014Z"
             },
             {
               "$type": "Document",
@@ -111,8 +107,7 @@
               "RelativeToolTip": "App_234_25\\Views\\AddLessonWindow.xaml.cs",
               "ViewState": "AgIAAEIAAAAAAAAAAAAUwFkAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T15:16:29.605Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-28T15:16:29.605Z"
             },
             {
               "$type": "Document",
@@ -123,8 +118,7 @@
               "ToolTip": "C:\\Users\\\u0410\u043D\u0430\u0442\u043E\u043B\u0438\u0439\\Desktop\\CourseProject\\App_234_25\\App_234_25\\Views\\AddLessonWindow.xaml",
               "RelativeToolTip": "App_234_25\\Views\\AddLessonWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-28T15:15:38.877Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-28T15:15:38.877Z"
             },
             {
               "$type": "Document",
@@ -136,8 +130,7 @@
               "RelativeToolTip": "App_234_25\\Views\\LoginWindow.xaml.cs",
               "ViewState": "AgIAAEoAAAAAAAAAAAAIwGgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T14:34:40.436Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-28T14:34:40.436Z"
             },
             {
               "$type": "Document",
@@ -148,8 +141,7 @@
               "ToolTip": "C:\\Users\\\u0410\u043D\u0430\u0442\u043E\u043B\u0438\u0439\\Desktop\\CourseProject\\App_234_25\\App_234_25\\Views\\LoginWindow.xaml",
               "RelativeToolTip": "App_234_25\\Views\\LoginWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-28T14:27:09.272Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-28T14:27:09.272Z"
             },
             {
               "$type": "Document",
@@ -160,8 +152,7 @@
               "ToolTip": "C:\\Users\\\u0410\u043D\u0430\u0442\u043E\u043B\u0438\u0439\\Desktop\\CourseProject\\App_234_25\\App_234_25\\MainWindow.xaml",
               "RelativeToolTip": "App_234_25\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-28T14:13:18.687Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-28T14:13:18.687Z"
             },
             {
               "$type": "Document",
@@ -171,7 +162,7 @@
               "RelativeDocumentMoniker": "App_234_25\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\\u0410\u043D\u0430\u0442\u043E\u043B\u0438\u0439\\Desktop\\CourseProject\\App_234_25\\App_234_25\\MainWindow.xaml.cs",
               "RelativeToolTip": "App_234_25\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAIwI8AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAIwGQAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-28T14:13:18.408Z",
               "EditorCaption": ""

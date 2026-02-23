@@ -98,7 +98,7 @@ namespace App_234_25
         // Кнопка закрыть
         private void Close_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown(); // Или this.Close();
+            Application.Current.Shutdown();
         }
 
         private void RefreshData()
