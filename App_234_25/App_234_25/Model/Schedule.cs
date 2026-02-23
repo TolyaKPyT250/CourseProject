@@ -21,6 +21,7 @@ namespace App_234_25.Model
         public Nullable<int> LecturerId { get; set; }
         public Nullable<int> RoomId { get; set; }
         public string SubjectName { get; set; }
+        public System.DateTime LessonDate { get; set; }
     
         public virtual Group Group { get; set; }
         public virtual Lecturer Lecturer { get; set; }

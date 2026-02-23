@@ -28,5 +28,6 @@ CREATE TABLE Schedules (
     GroupId INT FOREIGN KEY REFERENCES Groups(Id),
     LecturerId INT FOREIGN KEY REFERENCES Lecturers(Id),
     RoomId INT FOREIGN KEY REFERENCES Rooms(Id),
-    SubjectName NVARCHAR(100) NOT NULL
+    SubjectName NVARCHAR(100) NOT NULL,
+    LessonDate DATE NOT NULL
 );

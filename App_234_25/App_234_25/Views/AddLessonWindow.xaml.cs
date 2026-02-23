@@ -23,6 +23,18 @@ namespace App_234_25.Views
         public AddLessonWindow()
         {
             InitializeComponent();
+            dpLessonDate.SelectedDateChanged += (s, e) =>
+            {
+                if (dpLessonDate.SelectedDate != null)
+                {
+                    var culture = new System.Globalization.CultureInfo("ru-RU");
+                    string day = dpLessonDate.SelectedDate.Value.ToString("dddd", culture);
+
+                    day = char.ToUpper(day[0]) + day.Substring(1);
+
+                    cbDay.SelectedItem = day;
+                }
+            };
             FillLists();
         }
         private void FillLists()
@@ -46,25 +58,27 @@ namespace App_234_25.Views
             var group = cbGroup.SelectedItem as App_234_25.Model.Group;
             var room = cbRoom.SelectedItem as Room;
             var day = cbDay.SelectedItem as string;
+            DateTime? selectedDate = dpLessonDate.SelectedDate;
 
-            if (lecturer == null || group == null || room == null || day == null || cbLessonNumber.SelectedItem == null)
+            if (lecturer == null || group == null || room == null || day == null || cbLessonNumber.SelectedItem == null || selectedDate == null || string.IsNullOrWhiteSpace(txtSubject.Text))
             {
-                MessageBox.Show("Заполните абсолютно все поля!");
+                MessageBox.Show("Заполните абсолютно все поля, включая дату и название предмета!");
                 return;
             }
 
             int lessonNum = (int)cbLessonNumber.SelectedItem;
+            DateTime dateValue = selectedDate.Value.Date;
 
             using (var db = new user25Entities())
             {
                 // 1. Проверка: свободен ли ПРЕПОДАВАТЕЛЬ?
-                bool lecBusy = db.Schedules.Any(s => s.DayOfWeek == day && s.LessonNumber == lessonNum && s.LecturerId == lecturer.Id);
+                bool lecBusy = db.Schedules.Any(s => s.LessonDate == dateValue && s.LessonNumber == lessonNum && s.LecturerId == lecturer.Id);
 
                 // 2. Проверка: свободна ли ГРУППА?
-                bool grpBusy = db.Schedules.Any(s => s.DayOfWeek == day && s.LessonNumber == lessonNum && s.GroupId == group.Id);
+                bool grpBusy = db.Schedules.Any(s => s.LessonDate == dateValue && s.LessonNumber == lessonNum && s.GroupId == group.Id);
 
                 // 3. Проверка: свободна ли АУДИТОРИЯ? (Чтобы два препода не вели в одном кабинете)
-                bool romBusy = db.Schedules.Any(s => s.DayOfWeek == day && s.LessonNumber == lessonNum && s.RoomId == room.Id);
+                bool romBusy = db.Schedules.Any(s => s.LessonDate == dateValue && s.LessonNumber == lessonNum && s.RoomId == room.Id);
 
                 // Вывод ошибок
                 if (lecBusy) { MessageBox.Show("Преподаватель уже занят!"); return; }
@@ -79,14 +93,22 @@ namespace App_234_25.Views
                     LecturerId = lecturer.Id,
                     GroupId = group.Id,
                     RoomId = room.Id,
-                    SubjectName = txtSubject.Text
+                    SubjectName = txtSubject.Text,
+                    LessonDate = dateValue
                 };
 
-                db.Schedules.Add(newEntry);
-                db.SaveChanges();
+                try
+                {
+                    db.Schedules.Add(newEntry);
+                    db.SaveChanges();
 
-                MessageBox.Show("Запись успешно добавлена в расписание!");
-                this.DialogResult = true;
+                    MessageBox.Show("Запись успешно добавлена!");
+                    this.DialogResult = true;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ошибка при сохранении: " + ex.Message);
+                }
             }
         }
     }

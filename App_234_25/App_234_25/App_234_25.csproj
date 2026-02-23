@@ -103,6 +103,9 @@
     <Compile Include="Views\AddLessonWindow.xaml.cs">
       <DependentUpon>AddLessonWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\GenerateWindow.xaml.cs">
+      <DependentUpon>GenerateWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
@@ -119,6 +122,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\AddLessonWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GenerateWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
