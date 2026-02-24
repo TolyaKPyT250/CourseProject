@@ -144,7 +144,6 @@ namespace App_234_25
         }
         private void btnGenerate_Click(object sender, RoutedEventArgs e)
         {
-            // 1. Вызываем окно настроек
             GenerateWindow settingsWin = new GenerateWindow { Owner = this };
             if (settingsWin.ShowDialog() != true) return;
 
@@ -163,35 +162,48 @@ namespace App_234_25
                     return;
                 }
 
+                // --- ВЫЧИСЛЯЕМ ПОНЕДЕЛЬНИК ТЕКУЩЕЙ НЕДЕЛИ ---
+                DateTime today = DateTime.Now.Date;
+                int diff = (7 + (today.DayOfWeek - DayOfWeek.Monday)) % 7;
+                DateTime startDate = today.AddDays(-1 * diff);
+                // --------------------------------------------
+
                 Random rnd = new Random();
-                DateTime startDate = DateTime.Now.Date;
                 int addedCount = 0;
 
-                // Генерация на 5 рабочих дней
+                // Генерация строго на 5 дней: Пн, Вт, Ср, Чт, Пт
                 for (int dayOffset = 0; dayOffset < 5; dayOffset++)
                 {
                     DateTime currentDate = startDate.AddDays(dayOffset);
-                    if (currentDate.DayOfWeek == DayOfWeek.Saturday || currentDate.DayOfWeek == DayOfWeek.Sunday) continue;
 
+                    // Названия дней для БД
                     string dayStr = currentDate.ToString("dddd", new System.Globalization.CultureInfo("ru-RU"));
                     dayStr = char.ToUpper(dayStr[0]) + dayStr.Substring(1);
 
                     foreach (var group in allGroups)
                     {
-                        // Определяем случайное кол-во пар для ЭТОЙ группы на ЭТОТ день
                         int lessonsToCreate = rnd.Next(minL, maxL + 1);
 
                         for (int lessonNum = 1; lessonNum <= lessonsToCreate; lessonNum++)
                         {
-                            // Пытаемся подобрать свободного препода и аудиторию (до 10 попыток)
                             bool success = false;
-                            for (int retry = 0; retry < 10; retry++)
+                            for (int retry = 0; retry < 30; retry++) // Увеличил до 30 попыток для надежности
                             {
                                 var lecturer = allLecturers[rnd.Next(allLecturers.Count)];
                                 var room = allRooms[rnd.Next(allRooms.Count)];
 
-                                bool busy = db.Schedules.Local.Any(s => s.LessonDate == currentDate && s.LessonNumber == lessonNum && (s.LecturerId == lecturer.Id || s.RoomId == room.Id)) ||
-                                           db.Schedules.Any(s => s.LessonDate == currentDate && s.LessonNumber == lessonNum && (s.LecturerId == lecturer.Id || s.RoomId == room.Id));
+                                if (string.IsNullOrWhiteSpace(lecturer.Department)) continue;
+
+                                var subjects = lecturer.Department.Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
+                                if (subjects.Length == 0) continue;
+
+                                string randomSubject = subjects[rnd.Next(subjects.Length)];
+
+                                // Проверка занятости (включая уже добавленные в этом цикле через .Local)
+                                bool busy = db.Schedules.Local.Any(s => s.LessonDate == currentDate && s.LessonNumber == lessonNum &&
+                                            (s.LecturerId == lecturer.Id || s.RoomId == room.Id || s.GroupId == group.Id)) ||
+                                           db.Schedules.Any(s => s.LessonDate == currentDate && s.LessonNumber == lessonNum &&
+                                            (s.LecturerId == lecturer.Id || s.RoomId == room.Id || s.GroupId == group.Id));
 
                                 if (!busy)
                                 {
@@ -203,7 +215,7 @@ namespace App_234_25
                                         GroupId = group.Id,
                                         LecturerId = lecturer.Id,
                                         RoomId = room.Id,
-                                        SubjectName = "Дисциплина " + rnd.Next(1, 15)
+                                        SubjectName = randomSubject
                                     });
                                     addedCount++;
                                     success = true;
@@ -214,9 +226,15 @@ namespace App_234_25
                     }
                 }
                 db.SaveChanges();
-                MessageBox.Show($"Успешно сгенерировано {addedCount} пар.");
+                MessageBox.Show($"Расписание на неделю (с {startDate:dd.MM}) успешно сформировано! Добавлено пар: {addedCount}");
                 RefreshData();
             }
+        }
+        private void btnOpenSubjects_Click(object sender, RoutedEventArgs e)
+        {
+            LecturerSubjectsWindow subWin = new LecturerSubjectsWindow();
+            subWin.Owner = this;
+            subWin.ShowDialog();
         }
     }
 }

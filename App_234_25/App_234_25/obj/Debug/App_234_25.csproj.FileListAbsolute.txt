@@ -51,3 +51,5 @@ C:\Users\Анатолий\Desktop\CourseProject\App_234_25\App_234_25\obj\Debug\
 C:\Users\Анатолий\Desktop\CourseProject\App_234_25\App_234_25\obj\Debug\App_234_25.pdb
 C:\Users\Анатолий\Desktop\CourseProject\App_234_25\App_234_25\obj\Debug\Views\GenerateWindow.g.cs
 C:\Users\Анатолий\Desktop\CourseProject\App_234_25\App_234_25\obj\Debug\Views\GenerateWindow.baml
+C:\Users\Анатолий\Desktop\CourseProject\App_234_25\App_234_25\obj\Debug\Views\LecturerSubjectsWindow.baml
+C:\Users\Анатолий\Desktop\CourseProject\App_234_25\App_234_25\obj\Debug\Views\LecturerSubjectsWindow.g.cs

@@ -3,36 +3,69 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:App_234_25.Views"
         mc:Ignorable="d"
-        Title="Добавить пару" Height="480" Width="400" WindowStartupLocation="CenterScreen"
-        ResizeMode="NoResize">
-    <Grid>
-        <StackPanel Margin="20">
-            <TextBlock Text="Дата занятия:"/>
-            <DatePicker x:Name="dpLessonDate" Margin="0,5,0,10" 
-                        FirstDayOfWeek="Monday" 
-                        SelectedDateFormat="Short"/>
-            
-            <TextBlock Text="День недели:"/>
-            <ComboBox x:Name="cbDay" Margin="0,5,0,10"/>
+        Title="Добавить пару" Height="700" Width="500" 
+        WindowStartupLocation="CenterScreen"
+        Background="#8A2BE2" 
+        AllowsTransparency="True" WindowStyle="None">
 
-            <TextBlock Text="Номер пары (время):"/>
-            <ComboBox x:Name="cbLessonNumber" Margin="0,5,0,10"/>
+    <Border Background="#8A2BE2" BorderBrush="#44000000" BorderThickness="1">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
 
-            <TextBlock Text="Преподаватель:"/>
-            <ComboBox x:Name="cbLecturer" DisplayMemberPath="FullName" Margin="0,5,0,10"/>
+            <Grid Grid.Row="0" Background="Transparent" MouseDown="TitleBar_MouseDown">
+                <TextBlock Text="ДОБАВЛЕНИЕ ЗАНЯТИЯ" Foreground="#AAFFFFFF" VerticalAlignment="Center" Margin="15,0,0,0" FontSize="10" FontWeight="Bold"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button Content="—" Width="45" Height="40" Background="#33000000" Foreground="White" BorderThickness="0" Click="Minimize_Click"/>
+                    <Button Content="✕" Width="45" Height="40" Background="#33000000" Foreground="White" BorderThickness="0" Click="Close_Click">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#E81123"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                </StackPanel>
+            </Grid>
 
-            <TextBlock Text="Группа:"/>
-            <ComboBox x:Name="cbGroup" DisplayMemberPath="GroupName" Margin="0,5,0,10"/>
+            <Border Grid.Row="1" Background="White" VerticalAlignment="Center" HorizontalAlignment="Center"
+                    Width="400" Padding="30" CornerRadius="3">
+                <StackPanel>
+                    <TextBlock Text="НОВАЯ ПАРА" FontSize="20" FontWeight="Bold" Foreground="#222" Margin="0,0,0,20"/>
 
-            <TextBlock Text="Дисциплина:"/>
-            <TextBox x:Name="txtSubject" Margin="0,5,0,10"/>
+                    <TextBlock Text="ДАТА ЗАНЯТИЯ" FontSize="10" FontWeight="Bold" Foreground="#888" Margin="0,0,0,5"/>
+                    <DatePicker x:Name="dpLessonDate" Margin="0,0,0,15" Height="35" VerticalContentAlignment="Center"
+                                FirstDayOfWeek="Monday" SelectedDateFormat="Short"/>
 
-            <TextBlock Text="Аудитория:"/>
-            <ComboBox x:Name="cbRoom" DisplayMemberPath="RoomNumber" Margin="0,5,0,10"/>
+                    <TextBlock Text="ДЕНЬ НЕДЕЛИ" FontSize="10" FontWeight="Bold" Foreground="#888" Margin="0,0,0,5"/>
+                    <ComboBox x:Name="cbDay" Margin="0,0,0,15" Height="35" Background="#E5E5E5"/>
 
-            <Button Content="Сохранить" Click="Save_Click" Height="30" Background="LightGreen"/>
-        </StackPanel>
-    </Grid>
+                    <TextBlock Text="НОМЕР ПАРЫ" FontSize="10" FontWeight="Bold" Foreground="#888" Margin="0,0,0,5"/>
+                    <ComboBox x:Name="cbLessonNumber" Margin="0,0,0,15" Height="35" Background="#E5E5E5"/>
+
+                    <TextBlock Text="ПРЕПОДАВАТЕЛЬ" FontSize="10" FontWeight="Bold" Foreground="#888" Margin="0,0,0,5"/>
+                    <ComboBox x:Name="cbLecturer" DisplayMemberPath="FullName" Margin="0,0,0,15" Height="35" 
+                              Background="#E5E5E5" SelectionChanged="cbLecturer_SelectionChanged"/>
+
+                    <TextBlock Text="ГРУППА" FontSize="10" FontWeight="Bold" Foreground="#888" Margin="0,0,0,5"/>
+                    <ComboBox x:Name="cbGroup" DisplayMemberPath="GroupName" Margin="0,0,0,15" Height="35" Background="#E5E5E5"/>
+
+                    <TextBlock Text="ДИСЦИПЛИНА" FontSize="10" FontWeight="Bold" Foreground="#888" Margin="0,0,0,5"/>
+                    <ComboBox x:Name="cbSubject" Margin="0,0,0,15" Height="35" Background="#E5E5E5"/>
+
+                    <TextBlock Text="АУДИТОРИЯ" FontSize="10" FontWeight="Bold" Foreground="#888" Margin="0,0,0,5"/>
+                    <ComboBox x:Name="cbRoom" DisplayMemberPath="RoomNumber" Margin="0,0,0,20" Height="35" Background="#E5E5E5"/>
+
+                    <Button Content="СОХРАНИТЬ" Click="Save_Click" Height="45" Cursor="Hand" 
+                            Background="#222" Foreground="White" BorderThickness="0" FontWeight="Bold"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Border>
 </Window>

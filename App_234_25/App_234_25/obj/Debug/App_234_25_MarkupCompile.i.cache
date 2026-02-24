@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Анатолий\Desktop\CourseProject\App_234_25\App_234_25\App.xaml
-41224471600
+5-1019934739
 2739969757
-181177001211
+19-1061657698
 18348982635
-MainWindow.xaml;Views\AddLessonWindow.xaml;Views\GenerateWindow.xaml;Views\LoginWindow.xaml;
+MainWindow.xaml;Views\AddLessonWindow.xaml;Views\GenerateWindow.xaml;Views\LecturerSubjectsWindow.xaml;Views\LoginWindow.xaml;
 
-True
+False
 

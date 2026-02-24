@@ -3,7 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Редактор расписания" Height="600" Width="1000" 
         WindowStartupLocation="CenterScreen"
-        Background="#F4F4F9" AllowsTransparency="True" WindowStyle="None">
+        Background="#F4F4F9" AllowsTransparency="True" WindowStyle="None"
+        Icon="/Resources/Icon.ico">
 
     <Border BorderBrush="#44000000" BorderThickness="1" Background="White">
         <Grid>
@@ -51,6 +52,8 @@
                             Background="#FF8C00" Foreground="White" BorderThickness="0" Cursor="Hand" Margin="0,0,5,0"/>
                     <Button Content="🗑 ОЧИСТИТЬ" Click="btnClearAll_Click" Width="100" Height="35" 
                             Background="#666" Foreground="White" BorderThickness="0" Cursor="Hand" Margin="0,0,10,0"/>
+                    <Button Content="⚙ ПРЕДМЕТЫ" Click="btnOpenSubjects_Click" Width="100" Height="35" 
+        Background="#555" Foreground="White" BorderThickness="0" Margin="0,0,5,0"/>
                     <Button Content="+ ДОБАВИТЬ ПАРУ" Click="btnOpenAdd_Click" Width="150" Height="35" 
                             Background="#222" Foreground="White" BorderThickness="0" Cursor="Hand" Margin="0,0,10,0"/>
                     <Button Content="✕ УДАЛИТЬ ПАРУ" Click="btnDelete_Click" Width="150" Height="35" 
