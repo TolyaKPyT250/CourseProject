@@ -4,15 +4,15 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="c5c41b51a5714dffb5738a4e67eb4a24" Name="Diagram1">
+      <Diagram DiagramId="b050dfd42bb246a4b13fe7f197085cc7" Name="Diagram1" ZoomLevel="73">
         <EntityTypeShape EntityType="user25Model.Group" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
         <EntityTypeShape EntityType="user25Model.Lecturer" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
         <EntityTypeShape EntityType="user25Model.Room" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
         <EntityTypeShape EntityType="user25Model.Schedule" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="user25Model.User" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
-        <AssociationConnector Association="user25Model.FK__Schedules__Group__6A70BD6B" ManuallyRouted="false" />
-        <AssociationConnector Association="user25Model.FK__Schedules__Lectu__6B64E1A4" ManuallyRouted="false" />
-        <AssociationConnector Association="user25Model.FK__Schedules__RoomI__6C5905DD" ManuallyRouted="false" />
+        <AssociationConnector Association="user25Model.FK__Schedules__Group__6FE99F9F" ManuallyRouted="false" />
+        <AssociationConnector Association="user25Model.FK__Schedules__Lectu__70DDC3D8" ManuallyRouted="false" />
+        <AssociationConnector Association="user25Model.FK__Schedules__RoomI__71D1E811" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

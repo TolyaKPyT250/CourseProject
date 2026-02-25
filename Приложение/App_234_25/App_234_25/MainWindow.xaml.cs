@@ -193,22 +193,30 @@ namespace App_234_25
                                 string subjectName = fullSubject;
                                 string roomTag = "ОБЩ";
                                 string groupTag = "ОБЩ";
+                                bool isSRS = false;
 
                                 // Парсим формат Название(Кабинет:Группа)
                                 if (fullSubject.Contains("(") && fullSubject.Contains(")"))
                                 {
                                     subjectName = fullSubject.Substring(0, fullSubject.IndexOf("(")).Trim();
                                     string tagsPart = fullSubject.Substring(fullSubject.IndexOf("(") + 1, fullSubject.IndexOf(")") - fullSubject.IndexOf("(") - 1);
+                                    var parts = tagsPart.Split(':');
 
-                                    if (tagsPart.Contains(":"))
+                                    roomTag = parts.Length > 0 ? parts[0].Trim() : "ОБЩ";
+                                    groupTag = parts.Length > 1 ? parts[1].Trim() : "ОБЩ";
+
+                                    if (parts.Length > 2 && parts[2].Trim().ToUpper() == "СРС")
                                     {
-                                        var parts = tagsPart.Split(':');
-                                        roomTag = parts[0].Trim();
-                                        groupTag = parts[1].Trim();
+                                        isSRS = true;
                                     }
-                                    else
+                                }
+
+                                if (isSRS)
+                                {
+                                    // Если это СРС, но сейчас не первая и не последняя пара в плане дня
+                                    if (lessonNum != 1 && lessonNum != lessonsToCreate)
                                     {
-                                        roomTag = tagsPart.Trim(); // Если указан только один тэг, считаем его кабинетным
+                                        continue; // Пропускаем эту попытку, ищем обычный предмет
                                     }
                                 }
 
@@ -271,6 +279,15 @@ namespace App_234_25
             RoomsManagerWindow roomsWin = new RoomsManagerWindow();
             roomsWin.Owner = this;
             roomsWin.ShowDialog();
+        }
+        private void btnOpenGroups_Click(object sender, RoutedEventArgs e)
+        {
+            var win = new GroupsManagerWindow 
+            { 
+                Owner = this
+            };
+            win.ShowDialog();
+            LoadData();
         }
     }
 }

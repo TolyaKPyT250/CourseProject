@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:App_234_25.Views"
         mc:Ignorable="d"
-        Title="Управление кабинетами" Height="350" Width="500" WindowStartupLocation="CenterOwner"
+        Title="Управление кабинетами" Height="400" Width="550" WindowStartupLocation="CenterOwner"
         Icon="/Resources/Icon.ico">
     <Grid Margin="20">
         <Grid.ColumnDefinitions>
@@ -13,21 +13,37 @@
             <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Column="0" Margin="0,0,10,0">
+        <Grid Grid.Column="0" Margin="0,0,10,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
             <TextBlock Text="КАБИНЕТЫ:" FontWeight="Bold" Margin="0,0,0,5"/>
-            <ListBox x:Name="lbRooms" Height="220" DisplayMemberPath="RoomNumber" 
+            <ListBox x:Name="lbRooms" Grid.Row="1" DisplayMemberPath="RoomNumber" 
                      SelectionChanged="lbRooms_SelectionChanged"/>
-        </StackPanel>
+
+            <StackPanel Grid.Row="2" Margin="0,10,0,0">
+                <TextBox x:Name="txtNewRoomNumber" Height="25" Margin="0,0,0,5" Tag="№ кабинета"/>
+                <UniformGrid Columns="2">
+                    <Button Content="ДОБАВИТЬ" Click="AddRoom_Click" Height="30" Margin="0,0,2,0" 
+                            Background="#2E8B57" Foreground="White" FontWeight="Bold" BorderThickness="0"/>
+                    <Button Content="УДАЛИТЬ" Click="DeleteRoom_Click" Height="30" Margin="2,0,0,0" 
+                            Background="#CD5C5C" Foreground="White" FontWeight="Bold" BorderThickness="0"/>
+                </UniformGrid>
+            </StackPanel>
+        </Grid>
 
         <StackPanel Grid.Column="1">
             <TextBlock Text="ТЕГ КАБИНЕТА (Description):" FontWeight="Bold" Margin="0,0,0,5"/>
             <TextBox x:Name="txtDescription" Height="35" VerticalContentAlignment="Center" Padding="5"/>
 
             <TextBlock Text="Подсказка:" FontWeight="SemiBold" Margin="0,15,0,5"/>
-            <TextBlock Text="ОБЩ — обычные лекции&#x0a;ПК — компьютерные классы&#x0a;СПОРТ — спортзал&#x0a;БИБЛ — библиотека" 
+            <TextBlock Text="ОБЩ — лекции&#x0a;ПК — компьютерные классы&#x0a;СПОРТ — спортзал&#x0a;БИБЛ — библиотека" 
                        FontSize="11" Foreground="Gray" FontStyle="Italic"/>
 
-            <Button Content="СОХРАНИТЬ ТЕГ" Click="Save_Click" Margin="0,40,0,0" Height="35" 
+            <Button Content="СОХРАНИТЬ ТЕГ" Click="Save_Click" Margin="0,40,0,0" Height="40" 
                     Background="#8A2BE2" Foreground="White" FontWeight="Bold" BorderThickness="0"/>
         </StackPanel>
     </Grid>

@@ -52,18 +52,67 @@ namespace App_234_25.Views
                     var dbRoom = db.Rooms.Find(selected.Id);
                     if (dbRoom != null)
                     {
-                        // Сохраняем введенный тег, переводя его в верхний регистр для порядка
                         dbRoom.Description = txtDescription.Text.Trim().ToUpper();
                         db.SaveChanges();
 
                         MessageBox.Show($"Тег для кабинета {dbRoom.RoomNumber} успешно обновлен!");
-                        LoadRooms(); // Обновляем список
+                        LoadRooms();
                     }
                 }
             }
             else
             {
                 MessageBox.Show("Выберите кабинет из списка!");
+            }
+        }
+        private void AddRoom_Click(object sender, RoutedEventArgs e)
+        {
+            string roomNum = txtNewRoomNumber.Text.Trim();
+            if (string.IsNullOrEmpty(roomNum))
+            {
+                MessageBox.Show("Введите номер кабинета!");
+                return;
+            }
+
+            using (var db = new user25Entities())
+            {
+                var newRoom = new Room { RoomNumber = roomNum, Description = "ОБЩ" };
+                db.Rooms.Add(newRoom);
+                db.SaveChanges();
+
+                txtNewRoomNumber.Clear();
+                LoadRooms();
+                lbRooms.SelectedItem = newRoom;
+                MessageBox.Show("Кабинет добавлен!");
+            }
+        }
+        private void DeleteRoom_Click(object sender, RoutedEventArgs e)
+        {
+            if (lbRooms.SelectedItem is Room selected)
+            {
+                var result = MessageBox.Show($"Удалить кабинет {selected.RoomNumber}?", "Внимание",
+                                             MessageBoxButton.YesNo, MessageBoxImage.Warning);
+                if (result == MessageBoxResult.Yes)
+                {
+                    using (var db = new user25Entities())
+                    {
+                        var dbRoom = db.Rooms.Find(selected.Id);
+                        if (dbRoom != null)
+                        {
+                            try
+                            {
+                                db.Rooms.Remove(dbRoom);
+                                db.SaveChanges();
+                                txtDescription.Clear();
+                                LoadRooms();
+                            }
+                            catch (Exception)
+                            {
+                                MessageBox.Show("Нельзя удалить кабинет, в котором проводятся занятия!");
+                            }
+                        }
+                    }
+                }
             }
         }
     }
