@@ -59,7 +59,7 @@
 Background="#555" Foreground="White" BorderThickness="0" Margin="0,0,5,0"/>
                     <Button Content="+ ДОБАВИТЬ ПАРУ" Click="btnOpenAdd_Click" Width="150" Height="35" 
                             Background="#222" Foreground="White" BorderThickness="0" Cursor="Hand" Margin="0,0,10,0"/>
-                    <Button Content="✕ УДАЛИТЬ ПАРУ" Click="btnDelete_Click" Width="150" Height="35" 
+                    <Button Content="✕ УДАЛИТЬ ПАРУ" Click="btnDelete_Click" Width="112" Height="35" 
                             Background="#E81123" Foreground="White" BorderThickness="0" Cursor="Hand"/>
                     
                 </StackPanel>

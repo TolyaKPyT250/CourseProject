@@ -39,7 +39,7 @@
 
             <StackPanel x:Name="LeftPanel" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="60,0,20,0" Opacity="0">
                 <TextBlock Text="Добро пожаловать!" FontSize="46" FontWeight="Light" Foreground="White" TextWrapping="Wrap"/>
-                <TextBlock Text="Войдите для использования Редактора" FontSize="18" Foreground="#CCC" Margin="0,15,0,0" TextWrapping="Wrap"/>
+                <TextBlock Text="Введите логин и пароль для входа в систему" FontSize="18" Foreground="#CCC" Margin="0,15,0,0" TextWrapping="Wrap"/>
                 <StackPanel.RenderTransform>
                     <TranslateTransform x:Name="TextTranslate" X="-20"/>
                 </StackPanel.RenderTransform>
