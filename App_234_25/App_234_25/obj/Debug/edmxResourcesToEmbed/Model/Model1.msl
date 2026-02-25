@@ -4,6 +4,7 @@
     <EntitySetMapping Name="Groups">
       <EntityTypeMapping TypeName="user25Model.Group">
         <MappingFragment StoreEntitySet="Groups">
+          <ScalarProperty Name="Description" ColumnName="Description" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="GroupName" ColumnName="GroupName" />
         </MappingFragment>

@@ -49,7 +49,6 @@ namespace App_234_25
             AddLessonWindow addWin = new AddLessonWindow();
             if (addWin.ShowDialog() == true)
             {
-                // После добавления просто обновляем таблицу
                 RefreshData();
             }
         }
@@ -69,8 +68,6 @@ namespace App_234_25
                             db.Schedules.Remove(toDelete);
                             db.SaveChanges();
                             MessageBox.Show("Запись удалена");
-
-                            // Самое важное просто обновляем таблицу
                             RefreshData();
                         }
                     }
@@ -161,7 +158,7 @@ namespace App_234_25
                     return;
                 }
 
-                // Вычисление тек. недели
+                // вычисление тек. недели
                 DateTime today = DateTime.Now.Date;
                 int diff = (7 + (today.DayOfWeek - DayOfWeek.Monday)) % 7;
                 DateTime startDate = today.AddDays(-1 * diff);
@@ -169,7 +166,7 @@ namespace App_234_25
                 Random rnd = new Random();
                 int addedCount = 0;
 
-                // Генерация строго на 6 дней Пн, Вт, Ср, Чт, Пт и Сб
+                // генерация занятий на 6 дней Пн, Вт, Ср, Чт, Пт и Сб
                 for (int dayOffset = 0; dayOffset < 6; dayOffset++)
                 {
                     DateTime currentDate = startDate.AddDays(dayOffset);
@@ -185,40 +182,57 @@ namespace App_234_25
                         for (int lessonNum = 1; lessonNum <= lessonsToCreate; lessonNum++)
                         {
                             bool success = false;
-                            for (int retry = 0; retry < 50; retry++) // Увеличил до 50 попыток для надежности
+                            for (int retry = 0; retry < 50; retry++) // Цикл for для проверок условий
                             {
                                 var lecturer = allLecturers[rnd.Next(allLecturers.Count)];
                                 if (string.IsNullOrWhiteSpace(lecturer.Department)) continue;
 
                                 var subjects = lecturer.Department.Split(';');
-                                string fullSubject = subjects[rnd.Next(subjects.Length)]; // Пример: "История(ОБЩ)"
+                                string fullSubject = subjects[rnd.Next(subjects.Length)]; // Напр: "Программирование(ПК:ИТ)"
 
-                                // Извлекаем название предмета и тэг
                                 string subjectName = fullSubject;
-                                string requiredTag = "";
+                                string roomTag = "ОБЩ";
+                                string groupTag = "ОБЩ";
 
+                                // Парсим формат Название(Кабинет:Группа)
                                 if (fullSubject.Contains("(") && fullSubject.Contains(")"))
                                 {
-                                    subjectName = fullSubject.Substring(0, fullSubject.IndexOf("("));
-                                    requiredTag = fullSubject.Substring(fullSubject.IndexOf("(") + 1, fullSubject.IndexOf(")") - fullSubject.IndexOf("(") - 1);
+                                    subjectName = fullSubject.Substring(0, fullSubject.IndexOf("(")).Trim();
+                                    string tagsPart = fullSubject.Substring(fullSubject.IndexOf("(") + 1, fullSubject.IndexOf(")") - fullSubject.IndexOf("(") - 1);
+
+                                    if (tagsPart.Contains(":"))
+                                    {
+                                        var parts = tagsPart.Split(':');
+                                        roomTag = parts[0].Trim();
+                                        groupTag = parts[1].Trim();
+                                    }
+                                    else
+                                    {
+                                        roomTag = tagsPart.Trim(); // Если указан только один тэг, считаем его кабинетным
+                                    }
                                 }
 
-                                // Фильтруем комнаты по тэгу (если тэг указан)
-                                var suitableRooms = allRooms;
-                                if (!string.IsNullOrEmpty(requiredTag))
+                                // 1. ПРОВЕРКА: Подходит ли предмет этой группе по профилю?
+                                // Сравниваем тэг из предмета с Description группы из БД
+                                string groupProfile = group.Description ?? "ОБЩ";
+                                if (!groupTag.Equals("ОБЩ", StringComparison.OrdinalIgnoreCase) &&
+                                    !groupTag.Equals(groupProfile, StringComparison.OrdinalIgnoreCase))
                                 {
-                                    // Ищем комнаты, у которых в Description (или другом поле) прописан этот тэг
-                                    suitableRooms = allRooms.Where(r => r.Description != null && r.Description.Contains(requiredTag)).ToList();
+                                    continue; // Предмет не для этой группы, ищем дальше
                                 }
 
-                                if (suitableRooms.Count == 0) continue; // Если нет подходящих кабинетов, пробуем другого препода
+                                // 2. ФИЛЬТРАЦИЯ КАБИНЕТОВ (как раньше)
+                                var suitableRooms = allRooms.Where(r =>
+                                    (r.Description ?? "ОБЩ").Trim().Equals(roomTag, StringComparison.OrdinalIgnoreCase)).ToList();
+
+                                if (!suitableRooms.Any()) continue;
 
                                 var room = suitableRooms[rnd.Next(suitableRooms.Count)];
 
-                                // Стандартная проверка занятости (как была раньше)
+                                // 3. Проверка занятости (стандартная)
                                 bool busy = db.Schedules.Local.Any(s => s.LessonDate == currentDate && s.LessonNumber == lessonNum &&
                                             (s.LecturerId == lecturer.Id || s.RoomId == room.Id || s.GroupId == group.Id)) ||
-                                           db.Schedules.Any(s => s.LessonDate == currentDate && s.LessonNumber == lessonNum &&
+                                            db.Schedules.Any(s => s.LessonDate == currentDate && s.LessonNumber == lessonNum &&
                                             (s.LecturerId == lecturer.Id || s.RoomId == room.Id || s.GroupId == group.Id));
 
                                 if (!busy)
@@ -231,7 +245,7 @@ namespace App_234_25
                                         GroupId = group.Id,
                                         LecturerId = lecturer.Id,
                                         RoomId = room.Id,
-                                        SubjectName = subjectName // Сохраняем чистое название без тэга
+                                        SubjectName = subjectName
                                     });
                                     addedCount++;
                                     success = true;
@@ -251,6 +265,12 @@ namespace App_234_25
             LecturerSubjectsWindow subWin = new LecturerSubjectsWindow();
             subWin.Owner = this;
             subWin.ShowDialog();
+        }
+        private void btnOpenRooms_Click(object sender, RoutedEventArgs e)
+        {
+            RoomsManagerWindow roomsWin = new RoomsManagerWindow();
+            roomsWin.Owner = this;
+            roomsWin.ShowDialog();
         }
     }
 }

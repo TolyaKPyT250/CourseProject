@@ -11,7 +11,8 @@ CREATE TABLE Lecturers (
 -- 2. Группы
 CREATE TABLE Groups (
     Id INT PRIMARY KEY IDENTITY,
-    GroupName NVARCHAR(20) NOT NULL UNIQUE
+    GroupName NVARCHAR(20) NOT NULL UNIQUE,
+	Description NVARCHAR(255)
 );
 
 -- 3. Аудитории
