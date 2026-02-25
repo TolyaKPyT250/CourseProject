@@ -21,6 +21,7 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="RoomNumber" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="255" />
   </EntityType>
   <EntityType Name="Schedules">
     <Key>
@@ -43,7 +44,7 @@
     <Property Name="Login" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
-  <Association Name="FK__Schedules__Group__6FE99F9F">
+  <Association Name="FK__Schedules__Group__174363E2">
     <End Role="Groups" Type="Self.Groups" Multiplicity="0..1" />
     <End Role="Schedules" Type="Self.Schedules" Multiplicity="*" />
     <ReferentialConstraint>
@@ -55,7 +56,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Schedules__Lectu__70DDC3D8">
+  <Association Name="FK__Schedules__Lectu__1837881B">
     <End Role="Lecturers" Type="Self.Lecturers" Multiplicity="0..1" />
     <End Role="Schedules" Type="Self.Schedules" Multiplicity="*" />
     <ReferentialConstraint>
@@ -67,7 +68,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Schedules__RoomI__71D1E811">
+  <Association Name="FK__Schedules__RoomI__192BAC54">
     <End Role="Rooms" Type="Self.Rooms" Multiplicity="0..1" />
     <End Role="Schedules" Type="Self.Schedules" Multiplicity="*" />
     <ReferentialConstraint>
@@ -85,15 +86,15 @@
     <EntitySet Name="Rooms" EntityType="Self.Rooms" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Schedules" EntityType="Self.Schedules" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__Schedules__Group__6FE99F9F" Association="Self.FK__Schedules__Group__6FE99F9F">
+    <AssociationSet Name="FK__Schedules__Group__174363E2" Association="Self.FK__Schedules__Group__174363E2">
       <End Role="Groups" EntitySet="Groups" />
       <End Role="Schedules" EntitySet="Schedules" />
     </AssociationSet>
-    <AssociationSet Name="FK__Schedules__Lectu__70DDC3D8" Association="Self.FK__Schedules__Lectu__70DDC3D8">
+    <AssociationSet Name="FK__Schedules__Lectu__1837881B" Association="Self.FK__Schedules__Lectu__1837881B">
       <End Role="Lecturers" EntitySet="Lecturers" />
       <End Role="Schedules" EntitySet="Schedules" />
     </AssociationSet>
-    <AssociationSet Name="FK__Schedules__RoomI__71D1E811" Association="Self.FK__Schedules__RoomI__71D1E811">
+    <AssociationSet Name="FK__Schedules__RoomI__192BAC54" Association="Self.FK__Schedules__RoomI__192BAC54">
       <End Role="Rooms" EntitySet="Rooms" />
       <End Role="Schedules" EntitySet="Schedules" />
     </AssociationSet>

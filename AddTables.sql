@@ -17,7 +17,8 @@ CREATE TABLE Groups (
 -- 3. Аудитории
 CREATE TABLE Rooms (
     Id INT PRIMARY KEY IDENTITY,
-    RoomNumber NVARCHAR(10) NOT NULL
+    RoomNumber NVARCHAR(10) NOT NULL,
+	Description NVARCHAR(255)
 );
 
 -- 4. Расписание (Связующая таблица)
