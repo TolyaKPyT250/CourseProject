@@ -46,7 +46,7 @@ namespace App_234_25.Views
         {
             if (cbLecturer.SelectedItem is Lecturer selectedLecturer)
             {
-                // Используем твое поле Department для хранения предметов через ";"
+                // Используем поле Department для хранения предметов через ";"
                 // Пример в БД: "Математика;Физика;Информатика"
                 if (!string.IsNullOrWhiteSpace(selectedLecturer.Department))
                 {
@@ -100,7 +100,7 @@ namespace App_234_25.Views
                     LecturerId = lecturer.Id,
                     GroupId = group.Id,
                     RoomId = room.Id,
-                    SubjectName = selectedSubject, // Сохраняем строку
+                    SubjectName = selectedSubject,
                     LessonDate = dateValue
                 };
 
